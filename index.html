@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hotel Campo verde</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">  
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/padrao.css" rel="stylesheet">
+    <!-- BOLETO -->
+    <script language=javascript src="boleto/include/layout_cef.php"></script>
+    <script language=javascript src="boleto/boleto_cef.php"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+     <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Hotel Campo Verde</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll shadow2" href="#services">Serviços</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll shadow2" href="#portfolio">Promoções</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll shadow2" href="#about">Sobre</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll shadow2" href="#team">Contato</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll shadow2" href="#contact">Cadastro</a>
+                    </li>
+                      <li>
+                    <a class="page-scroll shadow2" href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">login</a></li>       
+                    <style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #fec503;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+.containerr {
+width: 500px;
+margin-left: 50px;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+span.Adm {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content2 {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 600px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.login2{
+    display: none;
+}
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    span.Adm {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+</style>
+
+<div id="id01" class="modal" "page-scroll">
+  
+  <form class="modal-content2 animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <alt="Avatar" class="avatar">
+    </div>
+
+    <div class="containerr login1">
+      <label><b>Nome de usuário</b></label>
+      <input type="text" placeholder="Digite seu E-mail" id="email" name="uname" required>
+
+      <label><b>Senha</b></label>
+      <input type="password" placeholder="Digite sua senha" id="senha" name="psw" required>
+        
+      <button type="submit" id="Login_cli">Login</button>
+      <input type="checkbox" checked="checked"> Lembrar-me
+    </div>
+    <div class="containerr login2">
+        <center> <label> Administrador</label></center>
+      <label><b>Nome de usuário</b></label>
+      <input type="text" placeholder="Digite seu E-mail" id="login" name="uname" required>
+
+      <label><b>Senha</b></label>
+      <input type="password" placeholder="Digite sua senha" id="senha_adm" name="psw" required>
+        
+      <button type="submit" id="Login_adm">Login</button>
+      <input type="checkbox" checked="checked"> Lembrar-me
+    </div>
+    <div class="containerr">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button> 
+      <span class="psw">-Não sou <a href="#contact" onclick="document.getElementById('id01').style.display='none'">cadastrado?</a></span>
+                    <span class="Adm">Logar como <a class="abrir2"><a  id="log">Administrador?</a></a>-</span></a>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>              
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading shadow">Bem-vindo ao<br>  Hotel Campo Verde</div>
+                <div class="intro-lead-in shadow2">Torne suas férias inesquecíveis</div>
+                <a href="#about" class="page-scroll btn btn-xl">Saiba mais</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Serviços</h2>
+                    <h3 class="section-subheading text-muted">Veja tudo que temos a lhe oferecer.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-leaf fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Pesque e pague</h4>
+                    <p class="text-muted">Pague apenas a taxa de pesca e leve todo os peixes que você conseguiu.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Espaço infantil acessível</h4>
+                    <p class="text-muted">Contamos com um espaço infantil acessível para crianças com deficiências.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-cutlery fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Seviço de Quarto</h4>
+                    <p class="text-muted">Refeições a todos os hóspedes se desejado e limpezas de quarto diariamente no horário disponível.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Promoções</h2>
+                    <h3 class="section-subheading text-muted">Aqui o lucro é todo seu, tudo para você viver essa experiência única.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/suite2.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Suíte Nuance R$250,00</h4>
+                        <p class="text-muted">Cama de casal e hidro.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/suiteplus3.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Suíte plus R$200,00</h4>
+                        <p class="text-muted">Cama de casal + TV e banheiro</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/triploluxo.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Triplo luxo R$100,00</h4>
+                        <p class="text-muted">3 camas de solteiro e banheiro.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/pep.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Pesque e pague</h4>
+                        <p class="text-muted">Fora do plano de quartos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/food.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Serviço de quarto</h4>
+                        <p class="text-muted"> Já incluso em todos os planos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/recreacao.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Área de recreação</h4>
+                        <p class="text-muted">Área gratuita para os visitantes. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Sobre</h2>
+                    <h3 class="section-subheading text-muted">Conheça nos um pouco mais.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/begin.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2010-2017</h4>
+                                    <h4 class="subheading">Entramos no grande mercado de hotéis.</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Iniciamos apenas como uma casa de campo alugada para os fins de semana, mas com o decorrer do tempo houve um aumento das buscas e resolvemos expandir ainda mais!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/reform.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Junho-2012</h4>
+                                    <h4 class="subheading">Reforma geral</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Fizemos uma reforma geral no ambiente para atender melhor os visistantes do nosso hotel, tornando-o mai sofisticado e confortável!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/park.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Dezembro-2014</h4>
+                                    <h4 class="subheading">Hotel-Park</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Visando formas de divertir os hóspedes no tempo em que permaneciam no hotel ampliamos o terreno criando novas formas de entretenimento, tais como: pescas, trilhas, entre outros. Elevando assim ainda mais o número de visitantes por temporada!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/ferias.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Julho-2016</h4>
+                                    <h4 class="subheading">Férias</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Nessas férias criamos uma área direcionada diretamente para as crianças se divertirem com moderação, ademais visando crianças com deficiências, todos os brinquedos foram construidos com plataformas acessíveis!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4> Estamos
+                                    <br> fazendo
+                                    <br>história!</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Nossos Diretores</h2>
+                    <h3 class="section-subheading text-muted">Todos os direitos reservados.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/bea.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ana Beatriz</h4>
+                        <p class="text-muted">Psicóloga</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://plus.google.com/106329548441523740377"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100007328772119&fref=ts"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/bea.magalhaess/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/kelly.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ana Kelly</h4>
+                        <p class="text-muted">Jornalista</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://plus.google.com/106866431567760386328"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/anakelly.almeida.161?fref=ts"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/anakelly_hp/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/deina.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Andreina Mendes</h4>
+                        <p class="text-muted">Engenheira Computacional</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://plus.google.com/118379587247530826578"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/andreina.mendes.1?fref=ts"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/_dreina_chan/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/Bruno.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Bruno Souza</h4>
+                        <p class="text-muted">Agrônomo</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://plus.google.com/u/0/115541094655373532412"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/groups/1606487916237620/"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/euamohotelfazenda/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/thi.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Thiago Amorim</h4>
+                        <p class="text-muted">Engenheiro Químico</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://plus.google.com/+ThiagoAmorimm"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/thiago.gomes.3914207"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/thiagoor_amorimm/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/yury.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Yury Nascimento</h4>
+                        <p class="text-muted">Publicitário</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://plus.google.com/+YuryNascimento"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100018128225747"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/yury.nascimento/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Um misto de apoio, amizade e amor pelo que fazemos nos trouxe até aqui hoje, formando o <br> Hotel Campo Verde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Aside -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Cadastro</h2>
+                    <h3 class="section-subheading text-muted">Cadastre-se e usufrua de nossos Serviços.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-12"> 
+                                <div class="form-group">
+                                   <input type="text" class="form-control" placeholder="Seu Nome *" id="nome" required data-validation-required-message="Por favor digite seu nome.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                  <div class="form-group">
+                                   <input type="number" class="form-control" placeholder="Seu CPF *" id="cpf" required data-validation-required-message="Por favor digite seu CPF.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="form-group">
+                                   <input type="tel" class="form-control" placeholder="Seu Telefone *" id="tell" required data-validation-required-message="Por favor digite seu telefone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="form-group">
+                                   <input type="number" class="form-control" placeholder="Seu RG *" id="rg" required data-validation-required-message="Por favor digite seu RG.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                  <div class="form-group">
+                                   <input type="text" class="form-control" placeholder="Seu Endereço *" id="endereço" required data-validation-required-message="Por favor digite seu endereço.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                 <div class="form-group">
+                                   <input type="number" class="form-control" placeholder="Número da casa *" id="numero" required data-validation-required-message="Por favor digite o número de sua residência.">
+                                    <p class="help-block text-danger"></p>                                   
+                                </div>
+
+                                <div class="form-group">
+                                  <input type="email" class="form-control" placeholder="Seu E-mail *" id="email" required data-validation-required-message="Por favor digite seu E-mail.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Sua Senha *" id="senha" required data-validation-required-message="Por favor digite sua senha.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="form-group">
+                                   <input type="date" class="form-control" placeholder="Sua data de nascimento *" id="data_nasc" required data-validation-required-message="Por favor digite sua data de nascimento.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                           
+                            <div class="clearfix"></div>
+                            <div class="col-lg-6 col-lg-offset-3 text-center">
+                                <div id="success"></div>
+                                <button type="button submit" id="Cadastro" class="btn btn-xl">Cadastrar-se</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Redes de computadores; Hotel Campo Verde-2017</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://plus.google.com/u/0/115541094655373532412"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/groups/1606487916237620/"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/euamohotelfazenda/"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#team">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+       <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal-lg modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container container-negagado">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <center><h2>Suítes nuance</h2></center>
+                                <p class="item-intro text-muted"><b>Desfrute o melhor do nosso hotel conosco, reserve uma das melhores suítes que temos para lhe oferecer e tenha as férias dos sonhos.</b></p>
+        <ul class="list-inline">
+            <center><h4>Faça login ou cadastre-se para reservar o quarto desejado.</h4></center>
+            <img class="img-responsive" src="img/portfolio/suite1.jpg"  alt="">
+            <br>
+                <p class="item-intro text-muted"><strong></strong><i> Quarto climatizado e vista para o jardim, contém uma cama de casal, banheiro, frigobar, chuveiro elétrico<br></i></a>.</p>
+             <img class="img-responsive " src="img/portfolio/suite.jpg" alt="">
+             <br>
+                <p class="item-intro text-muted"><strong></strong><i>Quarto climatizado com vista para a lagoa do hotel, contém cama de casal, poltrona relaxante, banheiro, hidromassagem, frigobar, TV e armário para pertences</i></a>.</p>
+              <img class="img-responsive " src="img/portfolio/suite2.jpg" alt="">
+              <br>
+                <p class="item-intro text-muted"><strong></strong><i>Quarto climatizado com janela e vista para o campo, contém cama de casal, espelho no teto, banheiro, frigobar, TV e armário para pertences</i></a>.</p>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fechar</button>
+        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal-lg modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container container-negagado">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <center><h2>Suítes plus</h2></center>
+                                <p class="item-intro text-muted"><b>Desfrute o melhor do nosso hotel conosco, reserve uma das suítes que temos para lhe oferecer e tenha as férias dos sonhos</b>.</p>
+        <ul class="list-inline">
+            <center><h4>Faça login ou cadastre-se para reservar o quarto desejado.</h4></center>
+             <img class="img-responsive " src="img/portfolio/suiteplus2.jpg" alt="">
+             <br>
+                <p class="item-intro text-muted"><strong></strong><i> Quarto climatizado localizado no térreo para acesso mais facilitado, contém uma cama de casal, banheiro e frigobar</i></a>.</p>
+              <img class="img-responsive " src="img/portfolio/suiteplus3.jpg" alt=""></a>
+              <br>
+                <p class="item-intro text-muted"><strong></strong><i> Quarto climatizado localizado no térreo para acesso mais facilitado, contém uma cama de casal, banheiro e armário</i></a>.</p>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fechar</button>
+        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+   <div class="portfolio-modal-lg modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container container-negagado">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <center><h2>Suítes triplo luxo</h2></center>
+                                <p class="item-intro text-muted"><b>Desfrute o melhor do nosso hotel conosco, reserve uma das suítes que temos para lhe oferecer e tenha as férias dos sonhos.</b></p>
+        <ul class="list-inline">
+
+            <center><h4>Faça login ou cadastre-se para reservar o quarto desejado.</h4></center>
+            <img class="img-responsive " src="img/portfolio/triploluxo.jpg" alt="">
+            <br>
+                <p class="item-intro text-muted"><strong></strong><i> Quarto localizado no térreo para acesso mais facilitado, contém uma cama de casal, banheiro e armário</i></a>.</p>
+              <img class="img-responsive " src="img/portfolio/triarm.jpg" alt="">
+              <br>
+                <p class="item-intro text-muted"><strong></strong><i> Quarto localizado no térreo para acesso mais facilitado, contém uma cama de casal, banheiro e frigobar</i></a>.</p>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fechar</button>
+        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 4 -->
+       <div class="portfolio-modal-lg modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container container-negagado">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <center><h2>Pesque e pague</h2></center>
+                                <p class="item-intro text-muted"><b>Desfrute o melhor do nosso hotel conosco, usando nossos diversos métodos de diversão.</b></p>
+        <ul class="list-inline">
+            <img class="img-responsive " src="img/portfolio/pep.jpg" alt="">
+            <br>
+                <p class="item-intro text-muted"><strong></strong><i>Pesque quantos peixes quiser, pagando apenas pelo tempo, no qual o valor de 1 hora equivale a R$10,00</i></a>.</p>
+            <img class="img-responsive " src="img/portfolio/pep1.jpg" alt="">
+             <br>
+                <p class="item-intro text-muted"><strong></strong><i>Todo o material é disponivel pelo hotel, tais como: vara de pescar, linha, anzol e iscas artificiais e/ou naturais</i></a>.</p>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fechar</button>
+        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+       <div class="portfolio-modal-lg modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container container-negagado">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <center><h2>Serviço de quarto</h2></center>
+                                <p class="item-intro text-muted"><b>Desfrute o melhor do nosso hotel conosco, usando nossos diversos serviços.</b></p>
+        <ul class="list-inline">
+            <img class="img-responsive " src="img/portfolio/food.jpg" alt="">
+            <br>
+                <p class="item-intro text-muted"><strong></strong><i>Esse serviço já está incluso em quaisquer dos quartos e planos de reservas aderidos, ofertando ao cliente diversas opções de acordo com o seu paladar</i></a>.</p>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fechar</button>
+        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+       <div class="portfolio-modal-lg modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container container-negagado">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <center><h2>Recreação</h2></center>
+                                <p class="item-intro text-muted"><b>Desfrute o melhor do nosso hotel conosco, usando nossos diversos métodos de relaxamento.</b></p>
+        <ul class="list-inline">
+            <img class="img-responsive " src="img/portfolio/recreacao.jpg" alt="">
+            <br>
+                <p class="item-intro text-muted"><strong></strong><i>Área de relaxamento gratuita para os visitantes, sendo esse o local onde eles poderão ver o pôr do sol ou apenas permanecerm deitados na casa das almofadas.</i></a>.</p>
+            <img class="img-responsive " src="img/portfolio/recreacao2.jpg" alt="">
+             <br>
+                <p class="item-intro text-muted"><strong></strong><i>Com uma quantia de apenas R$5,00 por hora desbrave todos os arredores do nosso hotel com um maravilhoso passeio a cavalo com treinamento e acompanhamento gratuito por pessoas especializadas se desejado.</i></a>.</p>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fechar</button>
+        </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/ajax.js"></script>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.min.js"></script>
+    
+    <script src="js/slide.js"></script>
+
+
+</body>
+
+</html>

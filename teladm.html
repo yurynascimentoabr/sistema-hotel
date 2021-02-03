@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Admin Campo Verde</title>
+</head>
+<body>
+	<header class="cd-main-header">
+		<a href="#0" class="cd-logo"><img src="img/cd-logo.svg" alt="Logo"></a>
+		
+
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+		<nav class="cd-nav">
+			<ul class="cd-top-nav">
+				<li class="has-children account">
+					<a href="#0">
+						<img src="img/user.png" alt="avatar">
+						Aministrador
+					</a>
+
+					<ul>
+						<li><a id="Sair_adm">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header> <!-- .cd-main-header -->
+
+	<main class="cd-main-content">
+		<nav class="cd-side-nav">
+			<ul>
+				<li class="cd-label"><strong>Menu</strong></li>
+				<li class="has-children bookmarks">
+					<a class="edit_adm" value="reservas">Reservas</a>
+				<li class="has-children overview">
+					<a class="edit_adm" value="serviços">Serviços</a>
+				</li>
+				<li class="has-children notifications">
+					<a class="edit_adm" value="funcionarios">Funcionários</a>
+				</li>
+				<li class="has-children images">
+					<a class="edit_adm" value="quartos">Suítes</a>
+				</li>
+
+				<li class="has-children users">
+					<a class="edit_adm" value="clientes">Clientes</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="content-wrapper">
+			<h1><center>
+				<table id="corpo" class="table table-bordered">
+					
+				</table>
+				</center>
+			</h1>
+		</div> <!-- .content-wrapper -->
+	</main> <!-- .cd-main-content -->
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.menu-aim.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
